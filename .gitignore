@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+yolov12_env/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Model weights and large files
+*.weights
+*.pth
+*.pt
+*.t7
+*.onnx
+*.engine
+*.plan
+
+# Video and image files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.gif
+*.jpg
+*.jpeg
+*.png
+*.bmp
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Output files
+output/
+results/
+runs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
