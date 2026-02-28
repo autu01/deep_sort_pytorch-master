@@ -1,33 +1,85 @@
-# DeepSort-PyTorch ��������������Python3.11+PyTorch2.0+cu117��
-easydict~=1.13
-joblib>=1.1.1  # ����scikit-learn==1.2.2�����Ҫ��
-numpy~=1.23.5
-et-xmlfile>=1.0.1
-motmetrics==1.2.0
-opencv-python~=4.8.1.78
-openpyxl==3.0.3
-packaging==20.3
-Pillow>=9.5.0
-py-cpuinfo>=5.0.0
-python-dateutil==2.8.1
-PyYAML~=6.0
-scikit-learn==1.2.2  # Python3.11���ݵ�Ԥ����棬��numpy1.23.5����
-scipy~=1.10.1
-six==1.14.0
-xmltodict==0.12.0
-zipp==3.1.0
-Vizer>=0.1.5
+# DeepSort-PyTorch with YOLOv12
+# Python 3.11+PyTorch 2.0+cu117
+# 最后更新: 2026-02-10
 
-# MMDet ��������
-mmdet~=3.0.0
-tqdm~=4.65.0
-matplotlib~=3.7.2
-seaborn~=0.11.2
-requests~=2.31.0
-thop~=0.1.1.post2209072238
-pycocotools~=2.0.6
-python-dotenv~=0.21.0
+# ============================================
+# Core Dependencies (必需依赖)
+# ============================================
+numpy==1.26.4
+scipy==1.10.1
+opencv-python==4.8.1.78
+Pillow==12.1.0
+easydict==1.13
+PyYAML==6.0.3
+tqdm==4.65.2
 
-# ���ֶ���װ������pip����
-lap==0.5.12
+# ============================================
+# PyTorch (需要手动安装)
+# ============================================
+# 请根据您的CUDA版本选择合适的安装命令：
+# CUDA 11.7: pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 --index-url https://download.pytorch.org/whl/cu117
+# CUDA 12.1: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# CPU only: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 torch==2.0.0+cu117
+torchvision==0.15.1+cu117
+
+# ============================================
+# YOLOv12 Dependencies (YOLOv12依赖)
+# ============================================
+ultralytics==8.4.13
+huggingface-hub==1.4.1
+psutil==7.2.2
+polars==1.38.1
+matplotlib==3.7.5
+seaborn==0.11.2
+
+# ============================================
+# DeepSort Dependencies (DeepSort依赖)
+# ============================================
+scikit-learn==1.2.2
+lap==0.5.12
+
+# ============================================
+# Optional Dependencies (可选依赖)
+# ============================================
+# MOT评估工具
+motmetrics==1.2.0
+
+# COCO数据集工具
+pycocotools==2.0.11
+
+# 其他工具
+requests==2.31.0
+python-dotenv==0.21.1
+joblib==1.5.3
+packaging==26.0
+
+# ============================================
+# Additional Tools (其他工具)
+# ============================================
+Vizer==0.1.5
+
+# ============================================
+# Optional: Flash Attention for YOLOv12
+# 需要CUDA支持，可选择性安装
+# ============================================
+# flash-attn>=2.0.0
+
+# ============================================
+# Development Dependencies (开发依赖)
+# ============================================
+# 如果需要进行模型训练或评估，请安装以下依赖：
+# thop>=0.1.1  # 模型复杂度分析
+# tensorboard>=2.10.0  # 训练可视化
+# wandb  # 实验跟踪
+
+# ============================================
+# 安装说明
+# ============================================
+# 1. 创建虚拟环境: python -m venv .venv
+# 2. 激活虚拟环境: 
+#    Windows: .venv\Scripts\Activate.ps1
+#    Linux/Mac: source .venv/bin/activate
+# 3. 安装PyTorch (根据CUDA版本选择):
+#    CUDA 11.7: pip install torch==2.0.0+cu117 torchvision==0.15.1+cu117 --index-url https://download.pytorch.org/whl/cu117
+# 4. 安装其他依赖: pip install -r requirements.txt
