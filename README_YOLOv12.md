@@ -1,3 +1,22 @@
+#测试指令
+python deepsort.py --VIDEO_PATH MOT16-04.mp4 --config_detection ./configs/yolov5s.yaml --display
+# DeepSort-PyTorch with YOLOv12
+
+python deepsort.py --VIDEO_PATH MOT16-04.mp4 --config_detection ./configs/yolov12s.yaml --display
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
+[![CUDA](https://img.shields.io/badge/CUDA-11.7+-green.svg)](https://developer.nvidia.com/cuda-toolkit)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+python deepsort.py --VIDEO_PATH traffic1.mp4 --config_detection ./configs/yolov12s.yaml --display
+#构建虚拟环境
+./.venv/Scripts/Activate.ps1
+**基于YOLOv12的车辆检测与轨迹追踪系统**
+
+公开数据集：UA-DETRAC（车辆检测专用，约 1000 段视频，标注车辆位置）、KITTI（含车辆检测 + 轨迹）；
+![](demo/demo.gif)
+
+
 # YOLOv12 车辆检测与轨迹追踪系统
 
 ## 项目概述
